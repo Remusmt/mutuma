@@ -8,12 +8,45 @@ generator client {
 }
 
 model User {
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
   firstName String?
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   lastName  String?
   password  String
+  projects  Project[]
   roles     Json
+  updatedAt DateTime  @updatedAt
+  username  String    @unique
+}
+
+model Project {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  models    Model[]
+  name      String
   updatedAt DateTime @updatedAt
-  username  String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+}
+
+model Model {
+  columns   Column[]
+  comments  String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String
+  project   Project? @relation(fields: [projectId], references: [id])
+  projectId String?
+  updatedAt DateTime @updatedAt
+}
+
+model Column {
+  createdAt    DateTime @default(now())
+  id           String   @id @default(cuid())
+  isPrimaryKey Boolean?
+  isUnique     Boolean?
+  model        Model?   @relation(fields: [modelId], references: [id])
+  modelId      String?
+  name         String
+  updatedAt    DateTime @updatedAt
 }
