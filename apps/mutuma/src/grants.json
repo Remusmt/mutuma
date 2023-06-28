@@ -1,6 +1,6 @@
 [
   {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "read:own",
     "attributes": "*"
@@ -8,7 +8,19 @@
   {
     "role": "user",
     "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
     "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
     "attributes": "*"
   },
   {
@@ -18,9 +30,15 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
     "resource": "User",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -30,7 +48,7 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
     "resource": "Project",
     "action": "read:own",
     "attributes": "*"
@@ -38,7 +56,19 @@
   {
     "role": "user",
     "resource": "Project",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
     "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "update:any",
     "attributes": "*"
   },
   {
@@ -48,9 +78,15 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
     "resource": "Project",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Project",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -60,9 +96,21 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Model",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "Model",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Model",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -72,7 +120,7 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
     "resource": "Model",
     "action": "update:any",
     "attributes": "*"
@@ -80,7 +128,19 @@
   {
     "role": "user",
     "resource": "Model",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Model",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Model",
+    "action": "read:any",
     "attributes": "*"
   },
   {
@@ -90,9 +150,21 @@
     "attributes": "*"
   },
   {
+    "role": "admin",
+    "resource": "Column",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
     "role": "user",
     "resource": "Column",
     "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Column",
+    "action": "create:any",
     "attributes": "*"
   },
   {
@@ -102,7 +174,7 @@
     "attributes": "*"
   },
   {
-    "role": "user",
+    "role": "admin",
     "resource": "Column",
     "action": "update:any",
     "attributes": "*"
@@ -110,7 +182,25 @@
   {
     "role": "user",
     "resource": "Column",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Column",
     "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Column",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Column",
+    "action": "read:any",
     "attributes": "*"
   },
   {
